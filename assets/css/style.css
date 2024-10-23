@@ -1,0 +1,735 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+/*---------AJUSTE DE BORDA, MARGEM E ESPAÇO DA PÁGINA-----------*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/*---------DEFINIÇÃO DE CORES PADRÃO DO SITE-----------*/
+:root{
+    --cor-padrao:#ff523b;
+    --cor-padrao-hover: #f3b2e5;
+    --cor-fonte: #fff;
+    --cor-fonte-p: #555;
+    --cor-btn: #563434;
+    --cor-btn-hover: #15ff00;
+    --cor-btn-fonte: #000;
+    --cor-fonte-corpo: #555;
+    --cor-fonte-corpo-leve: #777;
+    --cor-fonte-bannercolor: #804d4d;
+}
+
+body{
+
+
+/*---------FONTE GERAL-----------*/
+font-Family: 'poppins', sans-serif;
+}
+
+/*---------COR DE FUNDO DO BANNER-----------*/
+.banner{
+    background: radial-gradient(var(--cor-fonte-bannercolor), var(--cor-btn));
+}
+
+
+/*---------MARGEM DA LINHA DO BANNER-----------*/
+.banner .linha{
+
+    margin-top: 70px;
+}
+
+
+/*---------CONTAINER-----------*/
+.container{
+    max-width: 1300px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+
+/*---------MENU DE NAVEGAÇÃO-----------*/
+.navbar{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+nav{
+    flex: 1;
+    text-align: right;
+}
+
+nav ul{
+
+    display: inline-block;
+    list-style-type: none;
+}
+
+nav ul li{
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: var(--cor-fonte);
+}
+
+
+/*---------CORES DO PARAGRAFO DO BANNER-----------*/
+.banner p{
+    color: var(--cor-fonte);
+}
+
+p{
+    color: var(--cor-fonte-p);
+}
+
+
+/*---------LINHA DE PRODUTOS-----------*/
+.linha{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+
+/*---------COLUNA 2 MINIMO DE LARGURA E FLEX-----------*/
+.col-2{
+    flex-basis: 50%;
+    min-width: 300px;
+}
+
+/*---------COLUNA 2 AJUSTE DA IMAGEM-----------*/
+.col-2 img{
+    max-width: 100%;
+    padding: 50px 0px;
+}
+
+/*---------COLUNA 2 AJUSTE DO TEXTO-----------*/
+.col-2 h1{
+    font-size: 50px;
+    line-height: 60px;
+    margin: 25px 0px;
+    color: var(--cor-padrao-hover)
+}
+
+/*---------COLUNA 2 AJUSTE DO PARAGRAFO-----------*/
+.col-2 p{
+
+    font-weight: 600;
+    color: var(--cor-fonte);
+}
+
+/*---------BOTÃO DE MAIS INFORMAÇÕES-----------*/
+.btn{
+    text-decoration: none;
+    color: var(--cor-fonte);
+    background: var(--cor-btn);
+    padding: 8px 30px;
+    margin: 30px 0px;
+    border-radius: 30px;
+    transition: background 0.5s;
+}
+
+
+/*--------- COR HOVER DO BOTÃO-----------*/
+.btn:hover{
+    background: var(--cor-btn-hover);
+    color: var(--cor-btn-fonte);
+}
+
+
+/*---------CATEGORIAS DE PRODUTO-----------*/
+.categorias{
+    margin: 70px 0;
+}
+
+
+/*---------CORPO DE CATEGORIAS DOS PRODUTOS-----------*/
+.corpo-categorias{
+    max-width: 1800px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+/*---------COLUNA 3 AJUSTE DE MARGEM DO BOTÃO, LARGURA MAXIMA-----------*/
+.col-3{
+    flex-basis: 30%;
+    min-width: 250px;
+    margin-bottom: 30px;
+}
+
+/*---------COLUNA 3 AJUSTE DA IMAGEM-----------*/
+.col-3 img{
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/*---------COLUNA 4 TRANSIÇÃO(DELAY), ESPAÇAMENTO, MARGEM DO BOTÃO, LARGURA MAXIMA.-----------*/
+.col-4{
+    flex-basis: 25%;
+    min-width: 200px;
+    padding: 10px;
+    margin-bottom: 50px;
+    transition: transform 0.5s;
+}
+
+
+
+/*---------COLUNA 4 AJUSTE DA IMAGEM-----------*/
+.col-4 img{
+    width: 100%;
+}
+
+
+/*---------COLUNA 4 ANIMAÇÃO(ZOOM)-----------*/
+.col-4:hover{
+    transform: scale(1.1);
+}
+
+
+/*---------TITULO-----------*/
+.Titulo{
+    position: relative;
+    line-height: 60px;
+    margin: 0 auto 80px;
+    text-align: center;
+    color: var(--cor-fonte-corpo);
+}
+
+/*---------ABAIXO DO TITULO POSSUI UMA BARRA VERMELHA PEQUENA-----------*/
+.Titulo::after{
+    content: '';
+    background-color: var(--cor-padrao);
+    width: 80px;
+    height: 5px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/*---------COR E ALTURA DOS NOMES DOS PRODUTOS-----------*/
+h4{
+    color: var(--cor-fonte-corpo);
+    font-weight: normal;
+}
+
+/*---------TAMANHO DA FONTE DO NOME DOS PRODUTOS-----------*/
+.col-4 p{
+    font-size: 14px;
+}
+
+/*---------COR DAS ESTRELAS-----------*/
+.classificacao{
+    color: var(--cor-padrao);
+}
+
+/*---------PRODUTOS EXCLUSIVOS (OFERTAS)-----------*/
+.ofertas{
+    background: radial-gradient(var(--cor-fonte-bannercolor), var(--cor-btn));
+    margin-top: 80px;
+    padding: 30px 0;
+}
+
+
+/*---------ESPAÇAMENTO DO BANNER DE OFERTAS-----------*/
+.col-2 oferta-img{
+    padding: 50px;
+
+}
+
+/*---------CORES DE TEXTO DOS PRODUTOS EM OFERTA-----------*/
+small{
+    color: var(--cor-fonte);
+}
+
+
+
+/*---------DEPOIMENTOS ESPAÇAMENTO-----------*/
+.depoimentos{
+    padding-top: 100px;
+
+}
+
+/*---------AJUSTE DE TEXTO CENTRALIZADO ESPAÇAMENTO, BORDA ESCURA, CURSOR E TRANSIÇÃO-----------*/
+.depoimentos .col-3{
+    text-align: center;
+    padding: 40px 20px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+
+/*---------TRANSIÇÃO NA IMAGEM(ZOOM)-----------*/
+.depoimentos .col-3:hover{
+    transform: scale(1.1);
+}
+
+/*---------AJUSTE DE IMAGENS NA COLUNA 3 DE DEPOIMENTOS-----------*/
+.depoimentos .col-3 img{
+    width: 50px;
+    border-radius: 50%;
+    margin-top: 20px;
+    border: 2px solid var(--cor-padrao);
+}
+
+
+/*---------COR DOS ICONES NO DEPOIMENTO-----------*/
+.depoimentos-icon{
+    color: var(--cor-padrao);
+    font-size: 34px;
+}
+
+
+/*---------TAMANHO, COR E MARGEM DO TEXTO DAS PESSOAS QUE DERAM DEPOIMENTOS-----------*/
+.depoimentos .col-3 p{
+    font-size: 13px;
+    color: var(--cor-fonte-corpo-leve);
+    margin: 12px 0;
+}
+
+
+/*--------- TAMANHO, ALTURA E COR DO NOME DAS PESSOAS QUE DERAM DEPOIMENTOS-----------*/
+.depoimentos .col-3 h3{
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--cor-fonte-corpo);
+}
+
+/*---------MARCAS-----------*/
+.marcas{
+    margin: 100px auto;
+}
+
+
+
+/*---------COLUNA 5 PARA A DIREITA-----------*/
+.marcas col-5{
+    width: 160px;
+}
+
+
+
+/*---------COLUNA 5 AJUSTE DE IMAGEM DAS MARCAS, IMAGEM PRETO E BRANCO E CURSOR POINTER----------*/
+.col-5 img{
+    width: 100%;
+    cursor: pointer;
+    filter: grayscale(100%);
+}
+
+/*---------ALTERAÇÃO DE IMAGEM PARA COLORIDA COM FILTER-----------*/
+.col-5 img:hover{
+    filter: grayscale(0%);
+}
+
+
+
+/*---------RODAPÉ-----------*/
+.rodape{
+    background: var(--cor-btn-fonte);
+    color: var(--cor-fonte);
+    padding: 60px 0 20px;
+    font-size: 14px;   
+}
+
+.rodape p{
+    color: var(--cor-fonte);
+}
+
+.rodape h3{
+    color: var(--cor-fonte);
+    margin-bottom: 20px;
+}
+
+.rodape-col-1, .rodape-col-2, .rodape-col-3, .rodape-col-4{
+    min-width: 250px;
+    margin-bottom: 20px;
+}
+
+.rodape-col-1{
+    flex-basis: 30%;
+}
+
+.rodape-col-2{
+    flex: 1;
+    text-align: center;
+}
+
+.rodape-col-2 img{
+    width: 180px;
+    margin-bottom: 20px;
+}
+
+.rodape-col-3, .rodape-col-4{
+    flex-basis: 12%;
+    text-align: right;
+}
+
+ul{
+    list-style-type: none;
+}
+.app-logo{
+    margin-top: 20px;
+}
+
+.app-logo img{
+    width: 140px;
+}
+
+.rodape hr{
+    border: none;
+    height: 1px;
+    background: var(--cor-fonte);
+    margin: 20px 0;
+}
+
+
+
+.direitos{
+    text-align: center;
+}
+
+
+
+
+
+
+
+/*LISTAGEM DE PRODUTOS*/
+
+.novoMenu nav ul li a{
+color: var(--cor-btn-fonte);
+}
+
+.novoMenu{
+    box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.1);
+}
+
+.linha2{
+    margin: 100px auto 50px;
+    justify-content: space-between;
+}
+
+.linha2 select{
+padding: 5px;
+border: 1px solid var(--cor-padrao);
+}
+
+.linha2 select:focus{
+    outline: none;
+}
+
+.paginacao{
+    margin: 0 auto 80px;
+}
+
+.paginacao span{
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    border: 1px solid var(--cor-padrao);
+    text-align: center;
+    line-height: 40px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.paginacao span:hover{
+    background: var(--cor-padrao);
+    color: var(--cor-fonte);
+}
+
+
+
+
+
+
+
+/*----DETALHES DO PRODUTO-----*/
+.ver-produto{
+    margin-top: 40px;
+
+}
+
+.ver-produto .col-2 img{
+    width: 100%;
+    padding: 0;
+}
+
+.ver-produto #produtoimg{
+    width: 410px;
+    height: 450px;
+    object-fit: cover;
+    object-position: top;
+}
+
+.ver-produto .col-2{
+    padding: 20px;
+}
+
+.ver-produto .col h4{
+    margin: 20px 0;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.ver-produto select{
+    display: block;
+    padding: 10px;
+    margin-top: 20px;
+    border: 1px solid var(--cor-padrao);
+}
+
+.ver-produto select:focus{
+    outline: none;
+}
+
+.ver-produto input:focus{
+    outline: none;
+}
+
+.ver-produto input{
+    width: 50px;
+    height: 40px;
+    margin-right: 10px;
+    padding-left: 10px;
+    font-size: 20px;
+    border: 1px solid var(--cor-padrao);
+}
+
+.ver-produto p{
+    color: var(--cor-btn-fonte);
+    font-size: 13px;
+}
+
+.ver-produto h1{
+    color: var(--cor-btn-fonte);
+}
+
+.ver-produto .btn{
+    border: none;
+    background-color:var(--cor-btn);
+    height: 42px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.ver-produto .btn:hover{
+    background-color: var(--cor-btn-hover);
+}
+
+.img-linha{
+    display: flex;
+    justify-content: space-between;
+    width: 410px;
+}
+
+.img-col{
+    flex-basis: 100px;
+    cursor: pointer;
+
+}
+
+
+/*---------CARRINHO DE COMPRAS------------*/
+
+.carrinho-compras{
+    margin: 80px auto;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.info-carrinho{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+th{
+    background-color: var(--cor-padrao);
+    color: var(--cor-fonte);
+    text-align: left;
+    font-weight: normal;
+    padding: 5px;
+}
+
+td{
+    padding: 10px;
+}
+
+td input{
+    width: 40px;
+    height: 30px;
+    padding: 5px;
+}
+
+td a{
+    color: var(--cor-padrao);
+    font-size: 12px;
+}
+
+td img{
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+}
+
+.valor-total{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.valor-total table{
+    border-top: 3px solid var(--cor-padrao);
+    width: 100%;
+    max-width: 540px;
+}
+
+td:last-child{
+    text-align: right;
+}
+
+
+th:last-child{
+    text-align: right;
+}
+
+
+
+/*----BOTÃO PRA PAGAR---*/
+
+
+td label{
+    text-decoration: none;
+    color: var(--cor-fonte);
+    background: var(--cor-btn);
+    padding: 8px 30px;
+    margin: 30px 0px;
+    border-radius: 30px;
+    transition: background 0.5s;
+    cursor: pointer;
+}
+
+/*--------- COR HOVER DO BOTÃO-----------*/
+td label:hover{
+    background: var(--cor-btn-hover);
+    color: var(--cor-btn-fonte);
+}
+
+
+
+/*------DECORAÇÃO DO POPUP--------*/
+#popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+input[type="checkbox"] {
+    display: none;
+}
+input[type="checkbox"]:checked + #popup {
+    display: flex;
+}
+.popup-content {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+.close {
+    cursor: pointer;
+    color: red;
+    margin-top: 10px;
+}
+
+
+
+
+
+
+/*---------MENU CELULAR(TABLET) RESPONSIVE*/
+.menu-celular{
+    width: 28px;
+    margin-left: 20px;
+    display: none;
+}
+
+@media only screen and (max-width:800px){
+    nav ul{
+        position: absolute;
+        top: 70px;
+        left: 0;
+        background: var(--cor-btn-fonte);
+        width: 100%;
+        overflow: hidden;
+        transition: max-height 0.5s;
+    }
+
+    nav ul li{
+        display: block;
+        margin-top: 10px;
+        margin-right: 50px;
+        margin-bottom: 10px;
+    }
+
+    nav ul li a{
+        color: var(--cor-fonte);
+    }
+
+    .menu-celular{
+        display: block;
+        cursor: pointer;
+    }
+
+    .novoMenu nav ul li a{
+        color: var(--cor-fonte);
+        }
+}
+
+/*---------MENU CELULAR(ANDROID/IOS) RESPONSIVE*/
+
+@media only screen and (max-width:600px){
+.linha{
+    text-align: center;
+}
+.col-2,.col-3,.col-4{
+    flex-basis: 100%;
+}
+
+.col-2 h1{
+    font-size: 27px;
+}
+
+.rodape-col-3,.rodape-col-4{
+text-align: center;
+}
+
+.col-4{
+    font-size: 24px;
+}
+
+.novoMenu nav ul li a{
+    color: var(--cor-fonte);
+    }
+}
+
+
